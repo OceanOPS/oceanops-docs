@@ -1,0 +1,74 @@
+:root {
+  --md-primary-fg-color: #003b5c;
+  --md-primary-fg-color--light: #157fd2;
+  --md-primary-fg-color--dark: #00263a;
+  --md-accent-fg-color: #00a6d6;
+}
+
+.md-header {
+  background: linear-gradient(90deg, #003b5c, #157fd2);
+}
+
+.md-tabs {
+  background-color: #00263a;
+}
+
+.md-typeset h1 {
+  color: #003b5c;
+  font-weight: 800;
+}
+
+.md-typeset h2 {
+  color: #157fd2;
+  font-weight: 700;
+}
+
+.md-typeset a {
+  color: #0077b6;
+}
+
+.md-typeset .admonition.info,
+.md-typeset details.info {
+  border-color: #157fd2;
+}
+
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary {
+  background-color: rgba(21, 127, 210, 0.12);
+}
+
+.hero {
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #003b5c, #157fd2);
+  color: white;
+}
+
+.hero h1 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  max-width: 700px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  background: white;
+  box-shadow: 0 4px 18px rgba(0, 59, 92, 0.12);
+  border-top: 4px solid #157fd2;
+}
+
+[data-md-color-scheme="slate"] .card {
+  background: #1e293b;
+}

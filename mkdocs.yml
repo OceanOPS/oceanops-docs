@@ -1,0 +1,80 @@
+site_name: OceanOPS Docs
+site_description: OceanOPS documentation portal
+
+theme:
+  name: material
+  logo: assets/oceanops-logo.png
+  palette:
+    - scheme: default
+      primary: custom
+      accent: cyan
+    - scheme: slate
+      primary: custom
+      accent: cyan
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+extra_css:
+  - stylesheets/oceanops.css
+
+plugins:
+  - search
+  - awesome-pages
+
+nav:
+  - Home: index.md
+
+  - Argo:
+      - Overview: argo/index.md
+      - How To: argo/How-To.md
+      - Dashboard: argo/The-OceanOPS-dashboard.md
+
+      - Operational Monitoring: argo/Argo-operational-monitoring.md
+      - Status: argo/Argo-Status.md
+      - Mission: argo/Argo-mission.md
+      - Networks: argo/Argo-networks.md
+      - Planning: argo/Argo-Planning.md
+      - KPI: argo/Argo-KPI.md
+      - Target: argo/Argo-Target.md
+      - Sync with GDAC: argo/Argo-Sync-with-GDAC.md
+      - GDAC Sync: argo/Argo-‐-GDAC-synch.md
+      - Delay Grids: argo/Argo-Delay-Grids.md
+      - Deployment Plan: argo/Argo-deployment-plan-procedures.md
+      - GTS Monitoring: argo/Argo-GTS-Monitoring.md
+      - Index Files: argo/Argo-Index-files.md
+      - Greylist: argo/Argo-Greylist.md
+      - Ice: argo/Argo-Ice.md
+      - Charts: argo/Argo-Chart.md
+      - Survival Rate: argo/Argo-survival_rate.md
+      - Orphan Float: argo/Argo-Orphan-float-and-Stand-by-profiles.md
+      - Ending Cause: argo/Argo-ENDING-CAUSE.md
+      - Alerts: argo/Argo-alert,-warning-and-notification-system.md
+      - Auxiliary: argo/Argo-Auxilliary.md
+      - National Focal Points: argo/Argo-national-focal-point-and-IOC-resolutions.md
+      - WIGOS Allocation: argo/OceanOPS-WIGOS-ID-allocation-rules.md
+      - Roles and Rights: argo/OceanOPS-‐-Role-and-rights.md
+
+      - OceanGliders: argo/OceanGliders-Status-Management.md
+      - HF Radar: argo/HF-Radar-metadata.md
+      - FVON Uploading: argo/FVON-‐-ptf-uploading-process.md
+      - FVON Gear: argo/FVON-‐-GEAR-TYPE,-PLATFORM,-SENSOR.md
+      - BUFR Sequences: argo/GTS-‐-BUFR-sequences.md
+
+      - IT Meetings: argo/IT-Meetings.md
+      - IT 2023-03-27: argo/IT-Meeting-2023-03-27.md
+      - IT 2023-04-11: argo/IT-Meeting-2023-04-11.md
+      - IT 2023-05-02: argo/IT-Meeting-2023-05-02.md
+
+  - Support: support.md
+  - Passports: passports.md
+  - API: api.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
