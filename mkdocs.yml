@@ -3,6 +3,9 @@ site_description: OceanOPS documentation portal
 
 theme:
   name: material
+  font:
+    text: Google Sans
+    code: Roboto Mono
   logo: assets/oceanops-logo.png
   palette:
     - scheme: default
