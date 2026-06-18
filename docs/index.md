@@ -2,7 +2,7 @@
 
 <div class="hero-kicker">Documentation for OceanOPS services</div>
 
-A shared portal for OceanOPS services, GOOS Passports, APIs, support procedures, and operational guidance.
+</br>A shared portal for OceanOPS services, GOOS Passports, APIs, support procedures, and operational guidance.
 
 </div>
 
