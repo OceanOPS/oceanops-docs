@@ -65,11 +65,6 @@ nav:
       - FVON Gear: argo/FVON-‐-GEAR-TYPE,-PLATFORM,-SENSOR.md
       - BUFR Sequences: argo/GTS-‐-BUFR-sequences.md
 
-      - IT Meetings: argo/IT-Meetings.md
-      - IT 2023-03-27: argo/IT-Meeting-2023-03-27.md
-      - IT 2023-04-11: argo/IT-Meeting-2023-04-11.md
-      - IT 2023-05-02: argo/IT-Meeting-2023-05-02.md
-
   - Support: support.md
   - Passports: passports.md
   - API: api.md
