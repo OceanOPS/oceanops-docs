@@ -1,6 +1,6 @@
 <div class="hero">
 
-<div class="hero-kicker">Documentation for OceanOPS services</div>
+<div class="hero-kicker">Documentation for OceanOPS</div>
 
 </br>A shared portal for OceanOPS services, GOOS Passports, APIs, support procedures, and operational guidance.
 
