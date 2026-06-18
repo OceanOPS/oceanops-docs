@@ -1,6 +1,10 @@
 <div class="hero">
 
-A shared documentation portal for OceanOPS services, metadata standards, APIs, support procedures, and operational guidance.
+<div class="hero-kicker">OceanOPS Knowledge Base</div>
+
+# Documentation for ocean observing operations
+
+A shared portal for OceanOPS services, GOOS Passports, APIs, support procedures, and operational guidance.
 
 </div>
 
@@ -8,29 +12,28 @@ A shared documentation portal for OceanOPS services, metadata standards, APIs, s
 
 <div class="cards">
 
-<div class="card">
-<h2>SUPPORT</h2>
-FAQs, user guidance, operator procedures, and support workflows.
+<a class="home-card" href="support/">
+<div class="card-icon">?</div>
+<h2>Support</h2>
+<p>FAQs, user guidance, operator procedures, known issues, and support workflows.</p>
+<span>Open support docs →</span>
+</a>
 
+<a class="home-card" href="oceanmeta/">
+<div class="card-icon">◎</div>
+<h2>GOOS Passports</h2>
+<p>Minimum metadata requirements for GOOS Observations Coordination Group networks.</p>
+<span>Explore passports →</span>
+</a>
 
-</div>
-
-<div class="card">
-<h2>GOOS PASSPORTS</h2>
-Minimum metadata requirements
-for GOOS Observations Coordination Group networks.
-
-
-</div>
-
-<div class="card">
+<a class="home-card" href="api/">
+<div class="card-icon">{ }</div>
 <h2>API</h2>
-Technical documentation for OceanOPS APIs, identifiers, submissions, and data access.
-
+<p>Technical documentation for OceanOPS APIs, identifiers, submissions, and data access.</p>
+<span>View API docs →</span>
+</a>
 
 </div>
 
-</div>
-
-!!! info "POC"
-    This is a quick Material for MkDocs proof of concept for OceanOPS documentation.
+!!! info "Proof of concept"
+    This Material for MkDocs site is a quick proof of concept for an OceanOPS documentation portal.
