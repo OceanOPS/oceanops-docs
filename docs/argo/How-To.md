@@ -1,1 +1,1 @@
-* [How to update ship metadata](https://github.com/OceanOPS/helpdesk/wiki/HOW-TO---Update-ship-metadata)
+* [How to update ship metadata](../HOW-TO---Update-ship-metadata)
