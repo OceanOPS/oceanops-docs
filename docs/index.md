@@ -1,8 +1,6 @@
 <div class="hero">
 
-<div class="hero-kicker">OceanOPS Knowledge Base</div>
-
-# Documentation for ocean observing operations
+<div class="hero-kicker">Documentation for OceanOPS services</div>
 
 A shared portal for OceanOPS services, GOOS Passports, APIs, support procedures, and operational guidance.
 
