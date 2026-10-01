@@ -9,7 +9,7 @@
 <span>Open support docs →</span>
 </a>
 
-<a class="home-card" href="oceanmeta/">
+<a class="home-card" href="https://www.ocean-ops.org/passports">
 <h2>GOOS Passports</h2>
 <p>Minimum metadata requirements for GOOS Observations Coordination Group networks.</p>
 <span>Explore passports →</span>
