@@ -1,10 +1,3 @@
-<div class="hero">
-
-<div class="hero-kicker">Documentation for OceanOPS</div>
-
-</br>A shared portal for OceanOPS services, GOOS Passports, APIs, support procedures, and operational guidance.
-
-</div>
 
 ## Quick access
 
@@ -32,6 +25,3 @@
 </a>
 
 </div>
-
-!!! info "Proof of concept"
-    This Material for MkDocs site is a quick proof of concept for an OceanOPS documentation portal.
