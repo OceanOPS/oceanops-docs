@@ -97,21 +97,13 @@
   overflow: hidden;
   padding: 1.6rem;
   min-height: 220px;
-  border-radius: 1.2rem;
+  border-radius: 0rem;
   background: white;
   color: #0b1e42 !important;
   text-decoration: none !important;
   box-shadow: 0 10px 30px rgba(11, 30, 66, 0.12);
   border: 1px solid rgba(11, 30, 66, 0.08);
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-}
-
-.home-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #0b1e42, #00a6d6);
 }
 
 .home-card:hover {
