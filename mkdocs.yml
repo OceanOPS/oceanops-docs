@@ -1,5 +1,6 @@
 site_name: OceanOPS Docs
 site_description: OceanOPS documentation portal
+site_url: https://oceanops.github.io/oceanops-docs/
 
 theme:
   name: material
