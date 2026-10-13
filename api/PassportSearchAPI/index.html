@@ -1,0 +1,2362 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="OceanOPS documentation portal">
+      
+      
+      
+        <link rel="canonical" href="https://oceanops.github.io/oceanops-docs/api/PassportSearchAPI/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/oceanops-logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Passport Search API - OceanOPS Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Google Sans";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/oceanops.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#passport-search-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OceanOPS Docs" class="md-header__button md-logo" aria-label="OceanOPS Docs" data-md-component="logo">
+      
+  <img src="../../assets/oceanops-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OceanOPS Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Passport Search API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../argo/" class="md-tabs__link">
+          
+  
+  
+  Argo
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../support/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Support
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../passports.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Passports
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../api.md" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OceanOPS Docs" class="md-nav__button md-logo" aria-label="OceanOPS Docs" data-md-component="logo">
+      
+  <img src="../../assets/oceanops-logo.png" alt="logo">
+
+    </a>
+    OceanOPS Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Argo
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Argo
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/How-To/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How To
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/The-OceanOPS-dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-operational-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operational Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-mission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-networks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-KPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Target/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Target
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Sync-with-GDAC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sync with GDAC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-%E2%80%90-GDAC-synch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GDAC Sync
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Delay-Grids/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Delay Grids
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-deployment-plan-procedures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment Plan
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-GTS-Monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GTS Monitoring
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Index-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Greylist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Greylist
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Ice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ice
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Chart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Charts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-survival_rate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Survival Rate
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Orphan-float-and-Stand-by-profiles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orphan Float
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-ENDING-CAUSE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ending Cause
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-alert%2C-warning-and-notification-system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-Auxilliary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Auxiliary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/Argo-national-focal-point-and-IOC-resolutions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    National Focal Points
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/OceanOPS-WIGOS-ID-allocation-rules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WIGOS Allocation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/OceanOPS-%E2%80%90-Role-and-rights/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Roles and Rights
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/OceanGliders-Status-Management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OceanGliders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/HF-Radar-metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HF Radar
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/FVON-%E2%80%90-ptf-uploading-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FVON Uploading
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/FVON-%E2%80%90-GEAR-TYPE%2C-PLATFORM%2C-SENSOR/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FVON Gear
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../argo/GTS-%E2%80%90-BUFR-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BUFR Sequences
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../passports.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Passports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="passport-search-api">Passport Search API</h1>
+<h2 id="endpoint">Endpoint</h2>
+<div class="highlight"><pre><span></span><code><span class="err">POST https://www.ocean-ops.org/api/data/passports/search</span>
+<span class="err">Content-Type: application/json</span>
+</code></pre></div>
+<p>Returns pre-generated OceanOPS passport JSON documents from the PostgreSQL passport cache.</p>
+<p>Unlike traditional passport generation, this endpoint <strong>does not rebuild JSON on demand</strong>. Instead, it serves cached passport documents generated asynchronously by the database refresh pipeline, allowing fast queries and efficient bulk export.</p>
+<hr />
+<h1 id="features">Features</h1>
+<p>The endpoint supports:</p>
+<ul>
+<li>Retrieve one passport</li>
+<li>Retrieve multiple passports</li>
+<li>Bulk download all passports (~80,000)</li>
+<li>Filter using the existing OceanOPS platform filtering engine</li>
+<li>Filter by platform IDs</li>
+<li>Filter by OceanOPS internal IDs</li>
+<li>Incremental synchronization using cache update timestamps</li>
+<li>Pagination</li>
+<li>Streaming large responses</li>
+</ul>
+<hr />
+<h1 id="authentication">Authentication</h1>
+<p>This endpoint is public so does not require authentication.</p>
+<hr />
+<h1 id="request-body">Request Body</h1>
+<p>All request fields are optional.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">"ptfIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">"internalIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">"cachedSince"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-14T18:00:00"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="request-fields">Request Fields</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>filters</code></td>
+<td>object</td>
+<td>Existing OceanOPS platform filters.</td>
+</tr>
+<tr>
+<td><code>ptfIds</code></td>
+<td>integer[]</td>
+<td>Restrict to specific OceanOPS platform IDs.</td>
+</tr>
+<tr>
+<td><code>internalIds</code></td>
+<td>string[]</td>
+<td>Restrict to OceanOPS internal platform identifiers.</td>
+</tr>
+<tr>
+<td><code>cachedSince</code></td>
+<td>ISO datetime</td>
+<td>Only return passports regenerated after this UTC timestamp.</td>
+</tr>
+<tr>
+<td><code>paginationEnabled</code></td>
+<td>boolean</td>
+<td>Enable or disable pagination.</td>
+</tr>
+<tr>
+<td><code>limit</code></td>
+<td>integer</td>
+<td>Maximum number of passports returned when pagination is enabled.</td>
+</tr>
+<tr>
+<td><code>offset</code></td>
+<td>integer</td>
+<td>Number of matching passports to skip.</td>
+</tr>
+</tbody>
+</table>
+<p>All supplied criteria are combined using <strong>AND</strong> logic.</p>
+<hr />
+<h1 id="response">Response</h1>
+<h2 id="paginated-response">Paginated response</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"ptfId"</span><span class="p">:</span><span class="w"> </span><span class="mi">420</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"cacheUpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-14T19:02:17.324271Z"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"passport"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="err">...</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="bulk-response">Bulk response</h2>
+<p>When <code>paginationEnabled</code> is <code>false</code>, the response is streamed.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="err">...</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">80452</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h1 id="response-fields">Response Fields</h1>
+<h2 id="top-level-response">Top-level response</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>items</code></td>
+<td>Matching passport documents.</td>
+</tr>
+<tr>
+<td><code>total</code></td>
+<td>Total number of matching passports.</td>
+</tr>
+<tr>
+<td><code>paginationEnabled</code></td>
+<td>Indicates whether pagination was used.</td>
+</tr>
+<tr>
+<td><code>limit</code></td>
+<td>Page size (paginated mode only).</td>
+</tr>
+<tr>
+<td><code>offset</code></td>
+<td>Current page offset (paginated mode only).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="passport-metadata">Passport metadata</h2>
+<p>Each returned item contains:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ptfId</code></td>
+<td>OceanOPS platform database ID.</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>Passport cache version. Incremented whenever the cached passport changes.</td>
+</tr>
+<tr>
+<td><code>cacheUpdatedAt</code></td>
+<td>UTC timestamp when the cached passport was last regenerated.</td>
+</tr>
+<tr>
+<td><code>schemaVersion</code></td>
+<td>Passport JSON schema version.</td>
+</tr>
+<tr>
+<td><code>passport</code></td>
+<td>Complete cached passport JSON document.</td>
+</tr>
+</tbody>
+</table>
+<p>Each passport section contains this structure:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">            </span><span class="nt">"ptfId"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"cacheUpdatedAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-15T11:17:04.227482Z"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"schemaVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"passport"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"reportingStatus"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"closed"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CLOSED"</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">"latestObservation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">33.815</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">149.765</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2002-06-08T23:54:33Z"</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"hardware"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"telecom"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ARGOS"</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">"number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23815"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"endTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2002-06-08T23:54:33Z"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"startTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2001-07-20T00:00:00Z"</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">"platform"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"asset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"wmo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2900314"</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1182</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"provor-mt"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROVOR_MT"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span>
+<span class="w">                                    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Float"</span><span class="p">,</span>
+<span class="w">                                    </span><span class="nt">"wigosUri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://codes.wmo.int/wmdr/FacilityType/_underwaterMobile"</span>
+<span class="w">                                </span><span class="p">}</span>
+<span class="w">                            </span><span class="p">},</span>
+<span class="w">                            </span><span class="nt">"endTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2002-06-08T23:54:33Z"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">"sensorSetups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23763</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"variable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ocean-temperature"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ocean temperature"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23764</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"variable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ocean-salinity"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ocean salinity"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">55942</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"variable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pressure"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pressure"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">635349</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"variable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pressure"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pressure"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">635350</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"variable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ocean-salinity"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ocean salinity"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">635351</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"variable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ocean-temperature"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ocean temperature"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">641049</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"variable"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pressure"</span><span class="p">,</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pressure"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"operations"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"deployment"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"ship"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"hull"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"imoNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8920012"</span>
+<span class="w">                            </span><span class="p">},</span>
+<span class="w">                            </span><span class="nt">"registration"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                                </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KAIYO MARU"</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">33.999</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="mf">143.993</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2001-10-12T00:00:00Z"</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">"endTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2002-06-08T23:54:33Z"</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"affiliation"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"networkTags"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000420</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argo Core"</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000180</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argo Global"</span>
+<span class="w">                        </span><span class="p">},</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1001976</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global Core mission"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">],</span>
+<span class="w">                    </span><span class="nt">"supervisingProgram"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"argo-jamstec"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argo JAMSTEC"</span><span class="p">,</span>
+<span class="w">                        </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Japan"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">                    </span><span class="nt">"goosObservingNetworks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                        </span><span class="p">{</span>
+<span class="w">                            </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000620</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Argo"</span><span class="p">,</span>
+<span class="w">                            </span><span class="nt">"wigosCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"argo"</span>
+<span class="w">                        </span><span class="p">}</span>
+<span class="w">                    </span><span class="p">]</span>
+<span class="w">                </span><span class="p">},</span>
+<span class="w">                </span><span class="nt">"dataChannels"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">                </span><span class="nt">"identification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="nt">"reference"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2900314"</span><span class="p">,</span>
+<span class="w">                    </span><span class="nt">"passportId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0-22000-0-2900314"</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+</code></pre></div></p>
+<hr />
+<h1 id="usage-examples">Usage Examples</h1>
+<h2 id="retrieve-one-passport">Retrieve one passport</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"ptfIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">420</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="retrieve-several-passports">Retrieve several passports</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"ptfIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="mi">420</span><span class="p">,</span>
+<span class="w">        </span><span class="mi">511430</span><span class="p">,</span>
+<span class="w">        </span><span class="mi">511431</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="retrieve-by-oceanops-internal-identifiers">Retrieve by OceanOPS internal identifiers</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"internalIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"5212"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"8245"</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="retrieve-all-closed-platforms">Retrieve all closed platforms</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="retrieve-all-argo-platforms">Retrieve all Argo platforms</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"masterNetworks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000620"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="filter-by-program">Filter by program</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"programs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="filter-by-country">Filter by country</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"countries"</span><span class="p">:</span><span class="w"> </span><span class="s2">"66"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="filter-by-wigos-identifier">Filter by WIGOS identifier</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"wigosId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0-22000-0-5904525"</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="incremental-synchronization">Incremental synchronization</h2>
+<p>Returns only passports regenerated after the supplied UTC timestamp.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"cachedSince"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-01T00:00:00"</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This is the recommended mechanism for synchronizing Gateway or mobile app.</p>
+<hr />
+<h2 id="paginated-download">Paginated download</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"masterNetworks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000620"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="bulk-download">Bulk download</h2>
+<p>Downloads every matching passport.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Filtering can still be applied.</p>
+<p>Example:</p>
+<h2 id="filters-masternetworks-1000620-paginationenabled-false"><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"masterNetworks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000620"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div></h2>
+<h1 id="performance">Performance</h1>
+<p>The endpoint is designed for high-volume metadata distribution.</p>
+<p>Characteristics:</p>
+<ul>
+<li>Reads only from <code>passport_json_cache</code></li>
+<li>No JSON generation during requests</li>
+<li>Supports streaming responses</li>
+<li>Supports PostgreSQL cursor fetching</li>
+<li>Suitable for complete exports (&gt;80,000 passports)</li>
+<li>Supports efficient incremental synchronization using <code>cachedSince</code></li>
+</ul>
+<hr />
+<h1 id="typical-usage">Typical Usage</h1>
+<h2 id="gateway">Gateway</h2>
+<p>Nightly synchronization:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Incremental synchronization every few minutes:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"cachedSince"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-14T18:00:00"</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="mobile-applications">Mobile applications</h2>
+<p>Initial installation:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"paginationEnabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Subsequent synchronizations:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"cachedSince"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-07-14T18:00:00"</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h1 id="notes">Notes</h1>
+<ul>
+<li>All timestamps are returned in UTC using ISO 8601 format with a trailing <code>Z</code>.</li>
+<li>Passport JSON is generated asynchronously by the database refresh pipeline.</li>
+<li>The endpoint never regenerates passports during request processing.</li>
+<li><code>version</code> changes whenever the cached passport changes.</li>
+<li><code>schemaVersion</code> identifies the version of the passport JSON contract.</li>
+</ul>
+<hr />
+<h1 id="supported-platform-filters">Supported Platform Filters</h1>
+<p>The <code>filters</code> object supports the filtering capabilities provided by the OceanOPS platform search engine through <code>PlatformFilterSubQueryBuilder</code>.</p>
+<p>Filter names are <strong>case-sensitive</strong> and must be supplied exactly as documented below.</p>
+<h2 id="filter-format">Filter format</h2>
+<p>Filters are passed as properties of the request's <code>filters</code> object:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,2"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"programs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12,45"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"masterNetworks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000620"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"deplDateFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-01-01"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"deplDateTo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-12-31"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"hasWigosId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Most filters accepting multiple identifiers use a comma-separated string:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"programs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12,45,81"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"variables"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,2,7"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Dates use the <code>YYYY-MM-DD</code> format unless otherwise stated.</p>
+<p>Boolean-style filters generally use <code>"on"</code> or <code>"1"</code>. Some legacy filters also accept <code>"Yes"</code>.</p>
+<blockquote>
+<p>[!IMPORTANT]
+These are legacy search-engine parameters. Although values are supplied as strings, their meaning varies by filter and may represent identifiers, text, dates, numbers, or boolean flags.</p>
+</blockquote>
+<h2 id="common-filters">Common filters</h2>
+<p>Frequently used filters include:</p>
+<ul>
+<li><code>status</code></li>
+<li><code>programs</code></li>
+<li><code>masterNetworks</code></li>
+<li><code>networks</code></li>
+<li><code>country</code></li>
+<li><code>model</code></li>
+<li><code>modelType</code></li>
+<li><code>family</code></li>
+<li><code>ptfCategories</code></li>
+<li><code>variables</code></li>
+<li><code>deplDateFrom</code></li>
+<li><code>deplDateTo</code></li>
+<li><code>obsDateFrom</code></li>
+<li><code>obsDateTo</code></li>
+<li><code>wmoId</code></li>
+<li><code>wigosId</code></li>
+<li><code>internalId</code></li>
+</ul>
+<h2 id="complete-filter-reference">Complete filter reference</h2>
+<p>Many filters use oceanops database ids as values in filters. 
+Whilst these ids are not always easily publicly accessible, some are accessible via the vocabulary tables here: <a href="https://www.ocean-ops.org/passports/#/code-tables">OceanOPS Code Tables</a>.</p>
+<h3 id="platform-identity">Platform identity</h3>
+<ul>
+<li><code>ref</code>  : performs a prefix search , case-insensitive, so "390" matches: 390, 390A, 3907800) Supports multiple values: "filters": {"ref": "390,391"}</li>
+<li><code>exactRef</code> : performs exact match, "3902800" only matches 3902800. Supports multiple values: "filters": {"exactRef": "3902800,5906601"}</li>
+<li><code>name</code> : platform name prefix search. Example: <code>"RAMA"</code></li>
+<li><code>internalId</code> : internal platform IDs. Example: <code>"12345,67890"</code></li>
+<li><code>serialId</code> : platform serial number. Example: <code>"8472"</code></li>
+<li><code>maxSerial</code> : maximum platform serial. Example: <code>"5000"</code></li>
+<li><code>osPlatformName</code> : OceanSITES platform name. Example: <code>"PAPA"</code></li>
+<li><code>ageMin</code> : minimum platform age (years). Example: <code>"2"</code></li>
+<li><code>ageMax</code> : maximum platform age (years). Example: <code>"10"</code></li>
+<li><code>theme</code> : theme ID. Example: <code>"3"</code></li>
+</ul>
+<h3 id="platform-classification-and-ownership">Platform classification and ownership</h3>
+<ul>
+<li><code>model</code> : platform model IDs. Example: <code>"15,32"</code></li>
+<li><code>modelType</code> : model type IDs. Example: <code>"4,6"</code></li>
+<li><code>family</code> : platform family IDs. Example: <code>"2,5"</code></li>
+<li><code>ptfCategories</code> : platform category IDs. Example: <code>"7,9"</code></li>
+<li><code>classCategory</code> : class category IDs. Example: <code>"1000621"</code></li>
+<li><code>status</code> : platform status IDs. Example: <code>"1,2"</code></li>
+<li><code>owner</code> : owner agency ID. Example: <code>"105"</code></li>
+<li><code>country</code> : programme country IDs. Example: <code>"250,840"</code></li>
+<li><code>programs</code> : programme IDs. Example: <code>"12,45"</code></li>
+<li><code>programsAgency</code> : programme agency IDs. Example: <code>"10,15"</code></li>
+<li><code>masterNetworks</code> : master network IDs. Example: <code>"1000620"</code></li>
+<li><code>networks</code> : network IDs. Example: <code>"1000620,1000622"</code></li>
+<li><code>excludeNetworks</code> : excluded network IDs. Example: <code>"1000621"</code></li>
+<li><code>sensorProviderPrograms</code> : sensor provider programme IDs. Example: <code>"12,18"</code></li>
+<li><code>isAdopted</code> : adopted platforms only. Example: <code>"on"</code></li>
+<li><code>isPogoMember</code> : POGO member programmes only. Example: <code>"on"</code></li>
+</ul>
+<h3 id="platform-identifiers">Platform identifiers</h3>
+<ul>
+<li><code>wmoId</code> : WMO identifiers. Example: <code>"5906601"</code></li>
+<li><code>wmoStart</code> : WMO assignment start date. Example: <code>"2025-01-01"</code></li>
+<li><code>wmoEnd</code> : WMO assignment end date. Example: <code>"2025-12-31"</code></li>
+<li><code>wmoActive</code> : active WMO IDs only. Example: <code>"on"</code></li>
+<li><code>wigosId</code> : WIGOS identifiers. Example: <code>"0-22000-0-12345"</code></li>
+<li><code>hasWigosId</code> : platforms with a WIGOS ID. Example: <code>"on"</code></li>
+</ul>
+<h3 id="deployment">Deployment</h3>
+<ul>
+<li><code>deplDateFrom</code> : deployment date from. Example: <code>"2025-01-01"</code></li>
+<li><code>deplDateTo</code> : deployment date to. Example: <code>"2025-12-31"</code></li>
+<li><code>deplLatFrom</code> : minimum deployment latitude. Example: <code>"-60"</code></li>
+<li><code>deplLatTo</code> : maximum deployment latitude. Example: <code>"60"</code></li>
+<li><code>deplLonFrom</code> : minimum deployment longitude. Example: <code>"-180"</code></li>
+<li><code>deplLonTo</code> : maximum deployment longitude. Example: <code>"180"</code></li>
+<li><code>deplCountries</code> : deployment country IDs. Example: <code>"250,554"</code></li>
+<li><code>deplTypes</code> : deployment type IDs. Example: <code>"1,2"</code></li>
+<li><code>deplMethods</code> : deployment method IDs. Example: <code>"3"</code></li>
+<li><code>deplShip</code> : ship IDs or names. Example: <code>"1234,Pourquoi Pas?"</code></li>
+<li><code>excludeDeplShip</code> : exclude deployment ships. Example: <code>"on"</code></li>
+<li><code>deplCruise</code> : deployment cruise name. Example: <code>"PS145"</code></li>
+<li><code>minimumMaxMooringDepth</code> : minimum mooring depth (m). Example: <code>"1000"</code></li>
+<li><code>maximumMaxMooringDepth</code> : maximum mooring depth (m). Example: <code>"6000"</code></li>
+<li><code>drogue</code> : drogue status. Example: <code>"1"</code></li>
+<li><code>iced</code> : ice-capable platforms only. Example: <code>"on"</code></li>
+<li><code>beached</code> : beached platforms only. Example: <code>"on"</code></li>
+</ul>
+<h3 id="deployment-ship">Deployment ship</h3>
+<ul>
+<li><code>ptfShip</code> : platform ship IDs or names. Example: <code>"1234,Polarstern"</code></li>
+<li><code>excludePtfShip</code> : exclude platform ships. Example: <code>"on"</code></li>
+<li><code>shipTypes</code> : ship type IDs. Example: <code>"2,5"</code></li>
+<li><code>shipCountries</code> : ship country IDs. Example: <code>"250"</code></li>
+<li><code>shipIces</code> : ship ICES codes. Example: <code>"74AB"</code></li>
+<li><code>shipImo</code> : ship IMO number. Example: <code>"9272222"</code></li>
+<li><code>shipCallsign</code> : ship call sign. Example: <code>"FNCM"</code></li>
+<li><code>shipMmsi</code> : ship MMSI. Example: <code>"228123456"</code></li>
+</ul>
+<h3 id="cruise-and-route">Cruise and route</h3>
+<ul>
+<li><code>cruiseName</code> : cruise name. Example: <code>"PS145"</code></li>
+<li><code>cruiseExclude</code> : exclude cruise. Example: <code>"on"</code></li>
+<li><code>cruiseLine</code> : cruise line IDs. Example: <code>"23"</code></li>
+<li><code>lineType</code> : line type IDs. Example: <code>"2"</code></li>
+<li><code>lineFamily</code> : line family IDs. Example: <code>"5"</code></li>
+<li><code>lineStatus</code> : line status IDs. Example: <code>"1"</code></li>
+<li><code>area</code> : monitoring area IDs. Example: <code>"12"</code></li>
+</ul>
+<h3 id="retrieval">Retrieval</h3>
+<ul>
+<li><code>retrievalExclude</code> : platforms not retrieved. Example: <code>"on"</code></li>
+<li><code>retrievalCountry</code> : retrieval country ID. Example: <code>"250"</code></li>
+<li><code>retrievalStatus</code> : retrieval status IDs. Example: <code>"1,2"</code></li>
+<li><code>postRetrievalStatus</code> : post-retrieval status IDs. Example: <code>"3"</code></li>
+<li><code>retrievalStartDateFrom</code> : retrieval start date from. Example: <code>"2025-01-01"</code></li>
+<li><code>retrievalStartDateTo</code> : retrieval start date to. Example: <code>"2025-12-31"</code></li>
+<li><code>retrievalEndDateFrom</code> : retrieval end date from. Example: <code>"2025-01-01"</code></li>
+<li><code>retrievalEndDateTo</code> : retrieval end date to. Example: <code>"2025-12-31"</code></li>
+<li><code>retrievalLatFrom</code> : minimum retrieval latitude. Example: <code>"-45"</code></li>
+<li><code>retrievalLatTo</code> : maximum retrieval latitude. Example: <code>"45"</code></li>
+<li><code>retrievalLonFrom</code> : minimum retrieval longitude. Example: <code>"-180"</code></li>
+<li><code>retrievalLonTo</code> : maximum retrieval longitude. Example: <code>"180"</code></li>
+<li><code>endingCause</code> : ending cause IDs. Example: <code>"2,5"</code></li>
+</ul>
+<h3 id="latest-location">Latest location</h3>
+<ul>
+<li><code>locDateFrom</code> : latest location date from. Example: <code>"2026-01-01"</code></li>
+<li><code>locDateTo</code> : latest location date to. Example: <code>"2026-12-31"</code></li>
+<li><code>locLatFrom</code> : minimum latitude. Example: <code>"-45"</code></li>
+<li><code>locLatTo</code> : maximum latitude. Example: <code>"45"</code></li>
+<li><code>locLonFrom</code> : minimum longitude. Example: <code>"-180"</code></li>
+<li><code>locLonTo</code> : maximum longitude. Example: <code>"180"</code></li>
+<li><code>locStatus</code> : location status IDs. Example: <code>"1"</code></li>
+<li><code>lastLocOnly</code> : latest location only. Example: <code>"on"</code></li>
+</ul>
+<h3 id="observations">Observations</h3>
+<ul>
+<li><code>obsDataStatus</code> : observation status IDs. Example: <code>"1,2"</code></li>
+<li><code>obsDateFrom</code> : observation date from. Example: <code>"2026-01-01"</code></li>
+<li><code>obsDateTo</code> : observation date to. Example: <code>"2026-12-31"</code></li>
+<li><code>obsLatFrom</code> : minimum latitude. Example: <code>"-45"</code></li>
+<li><code>obsLatTo</code> : maximum latitude. Example: <code>"45"</code></li>
+<li><code>obsLonFrom</code> : minimum longitude. Example: <code>"-180"</code></li>
+<li><code>obsLonTo</code> : maximum longitude. Example: <code>"180"</code></li>
+<li><code>lastObsOnly</code> : latest observation only. Example: <code>"on"</code></li>
+<li><code>dmMin</code> : minimum delayed-mode percentage. Example: <code>"80"</code></li>
+<li><code>dmMax</code> : maximum delayed-mode percentage. Example: <code>"100"</code></li>
+</ul>
+<h3 id="observation-statistics">Observation statistics</h3>
+<ul>
+<li><code>obsAdMeanPsalMin</code> : minimum mean PSAL adjustment. Example: <code>"0.1"</code></li>
+<li><code>obsAdMeanPsalMax</code> : maximum mean PSAL adjustment. Example: <code>"1.0"</code></li>
+<li><code>obsAdMeanPsalAbs</code> : absolute mean PSAL adjustment. Example: <code>"0.5"</code></li>
+<li><code>obsAdDevPsalMin</code> : minimum PSAL deviation. Example: <code>"0.01"</code></li>
+<li><code>obsAdDevPsalMax</code> : maximum PSAL deviation. Example: <code>"0.50"</code></li>
+<li><code>obsAdDevPsalAbs</code> : absolute PSAL deviation. Example: <code>"0.25"</code></li>
+</ul>
+<h3 id="standby-observations">Standby observations</h3>
+<ul>
+<li><code>yearsInStandby</code> : years in standby. Example: <code>"2"</code></li>
+<li><code>obsStandbyVariables</code> : variable IDs. Example: <code>"1,7"</code></li>
+<li><code>standbyObsExcludeAdjusted</code> : exclude adjusted observations. Example: <code>"on"</code></li>
+</ul>
+<h3 id="platform-operating-configuration">Platform operating configuration</h3>
+<ul>
+<li><code>totalCycleTime</code> : cycle time (hours). Example: <code>"240"</code></li>
+<li><code>minTotalCycleTime</code> : minimum cycle time. Example: <code>"120"</code></li>
+<li><code>maxTotalCycleTime</code> : maximum cycle time. Example: <code>"360"</code></li>
+<li><code>driftDepth</code> : drift depth (m). Example: <code>"1000"</code></li>
+<li><code>minDriftDepth</code> : minimum drift depth. Example: <code>"800"</code></li>
+<li><code>maxDriftDepth</code> : maximum drift depth. Example: <code>"2000"</code></li>
+<li><code>profileDepth</code> : profile depth (m). Example: <code>"2000"</code></li>
+<li><code>minProfileDepth</code> : minimum profile depth. Example: <code>"1000"</code></li>
+<li><code>maxProfileDepth</code> : maximum profile depth. Example: <code>"6000"</code></li>
+<li><code>surfaceTime</code> : surface time (minutes). Example: <code>"20"</code></li>
+<li><code>minSurfaceTime</code> : minimum surface time. Example: <code>"10"</code></li>
+<li><code>maxSurfaceTime</code> : maximum surface time. Example: <code>"30"</code></li>
+<li><code>sampleLevels</code> : number of sample levels. Example: <code>"50"</code></li>
+<li><code>minSampleLevels</code> : minimum sample levels. Example: <code>"30"</code></li>
+<li><code>maxSampleLevels</code> : maximum sample levels. Example: <code>"100"</code></li>
+<li><code>battery</code> : battery percentage. Example: <code>"80"</code></li>
+<li><code>trackingSystem</code> : tracking system ID. Example: <code>"2"</code></li>
+</ul>
+<h3 id="variables-and-sensors">Variables and sensors</h3>
+<ul>
+<li><code>variables</code> : variable IDs. Example: <code>"1,2,7"</code></li>
+<li><code>variableExclude</code> : excluded variable IDs. Example: <code>"10"</code></li>
+<li><code>variableFamily</code> : variable family IDs. Example: <code>"3"</code></li>
+<li><code>variableMustMeasureAll</code> : require all variables. Example: <code>"on"</code></li>
+<li><code>subvariables</code> : subvariable IDs. Example: <code>"15,16"</code></li>
+<li><code>sensormodels</code> : sensor model IDs. Example: <code>"101,102"</code></li>
+<li><code>sensortypes</code> : sensor type IDs. Example: <code>"5,8"</code></li>
+<li><code>sensorfamilies</code> : sensor family IDs. Example: <code>"2"</code></li>
+<li><code>sensorSerialId</code> : sensor serial number. Example: <code>"A12345"</code></li>
+<li><code>maxSensorSerial</code> : maximum sensor serial. Example: <code>"99999"</code></li>
+<li><code>minimumSensorDepth</code> : minimum sensor depth (m). Example: <code>"100"</code></li>
+<li><code>maximumSensorDepth</code> : maximum sensor depth (m). Example: <code>"5000"</code></li>
+<li><code>noSensors</code> : platforms without sensors. Example: <code>"on"</code></li>
+</ul>
+<h3 id="telecommunications">Telecommunications</h3>
+<ul>
+<li><code>telType</code> : telemetry type IDs. Example: <code>"2"</code></li>
+<li><code>telServices</code> : telemetry service IDs. Example: <code>"4"</code></li>
+<li><code>telFormats</code> : telemetry format IDs. Example: <code>"1"</code></li>
+<li><code>telNum</code> : telemetry number prefix search. Example: <code>"3002"</code></li>
+<li><code>imei</code> : IMEI prefix search. Example: <code>"30023401"</code></li>
+<li><code>backupTelType</code> : backup telemetry type IDs. Example: <code>"2"</code></li>
+<li><code>backupTelServices</code> : backup telemetry service IDs. Example: <code>"3"</code></li>
+<li><code>backupTelFormats</code> : backup telemetry format IDs. Example: <code>"1"</code></li>
+<li><code>backupTelNum</code> : backup telemetry number. Example: <code>"8816"</code></li>
+<li><code>backupTelImei</code> : backup IMEI. Example: <code>"30023456"</code></li>
+</ul>
+<h3 id="data-assembly-centres">Data assembly centres</h3>
+<ul>
+<li><code>dacs</code> : DAC IDs. Example: <code>"1,3"</code></li>
+<li><code>gdacs</code> : GDAC IDs. Example: <code>"1,2"</code></li>
+<li><code>notGdacs</code> : excluded GDAC IDs. Example: <code>"3"</code></li>
+<li><code>allDacs</code> : require all DACs. Example: <code>"1"</code></li>
+<li><code>allGdacs</code> : require all GDACs. Example: <code>"1"</code></li>
+<li><code>allNotGdacs</code> : exclude all GDACs. Example: <code>"1"</code></li>
+<li><code>noDmManager</code> : no delayed-mode manager. Example: <code>"on"</code></li>
+</ul>
+<h3 id="sites">Sites</h3>
+<ul>
+<li><code>siteNames</code> : site IDs or names. Example: <code>"PAPA,BERMUDA"</code></li>
+<li><code>sitesLatest</code> : latest site only. Example: <code>"on"</code></li>
+</ul>
+<h3 id="contacts">Contacts</h3>
+<ul>
+<li><code>contacts</code> : contact IDs. Example: <code>"1000360"</code></li>
+<li><code>contactRoles</code> : contact role IDs. Example: <code>"243"</code></li>
+</ul>
+<h3 id="geographic-areas-at-deployment">Geographic areas at deployment</h3>
+<ul>
+<li><code>seaRegions</code> : sea region IDs. Example: <code>"2"</code></li>
+<li><code>seaSubRegions</code> : sea subregion IDs. Example: <code>"15"</code></li>
+<li><code>sovereignties</code> : sovereignty IDs. Example: <code>"250"</code></li>
+<li><code>claims</code> : maritime claim IDs. Example: <code>"3"</code></li>
+<li><code>deplArgoDesignOceans</code> : Argo design ocean IDs. Example: <code>"1"</code></li>
+</ul>
+<h3 id="geographic-areas-at-latest-location">Geographic areas at latest location</h3>
+<ul>
+<li><code>latestLocSeaRegions</code> : sea region IDs. Example: <code>"2"</code></li>
+<li><code>latestLocSeaSubRegions</code> : sea subregion IDs. Example: <code>"15"</code></li>
+<li><code>latestLocSovereignties</code> : sovereignty IDs. Example: <code>"250"</code></li>
+<li><code>latestLocClaims</code> : maritime claim IDs. Example: <code>"3"</code></li>
+<li><code>latestLocArgoDesignOceans</code> : Argo design ocean IDs. Example: <code>"1"</code></li>
+</ul>
+<h3 id="quality-control">Quality control</h3>
+<ul>
+<li><code>blacklist</code> : blacklist status. Example: <code>"1"</code></li>
+<li><code>pendingFeedback</code> : pending QC only. Example: <code>"on"</code></li>
+<li><code>qcErrorType</code> : QC error type IDs. Example: <code>"4"</code></li>
+<li><code>qcAction</code> : QC action IDs. Example: <code>"2"</code></li>
+<li><code>qcVariable</code> : variable IDs. Example: <code>"7"</code></li>
+<li><code>qcFeedbackType</code> : feedback type IDs. Example: <code>"5"</code></li>
+<li><code>warningsChecked</code> : warning review status. Example: <code>"1"</code></li>
+<li><code>warningCoastalState</code> : coastal state IDs. Example: <code>"250"</code></li>
+<li><code>warningDateFrom</code> : warning date from. Example: <code>"2026-01-01"</code></li>
+<li><code>warningDateTo</code> : warning date to. Example: <code>"2026-12-31"</code></li>
+<li><code>warningLastReportDateFrom</code> : last report date from. Example: <code>"2026-01-01"</code></li>
+<li><code>warningLastReportDateTo</code> : last report date to. Example: <code>"2026-12-31"</code></li>
+</ul>
+<h3 id="notifications-and-batch-processing">Notifications and batch processing</h3>
+<ul>
+<li><code>notifDateFrom</code> : notification date from. Example: <code>"2026-01-01"</code></li>
+<li><code>notifDateTo</code> : notification date to. Example: <code>"2026-12-31"</code></li>
+<li><code>batchRef</code> : batch reference prefix search. Example: <code>"REQ2026"</code></li>
+<li><code>batchStatus</code> : batch status IDs. Example: <code>"2"</code></li>
+</ul>
+<h3 id="ice-detection">Ice detection</h3>
+<ul>
+<li><code>iceDetect</code> : ice detection enabled. Example: <code>"on"</code></li>
+<li><code>noIceDetect</code> : no ice detection. Example: <code>"on"</code></li>
+</ul>
+<h3 id="firmware-and-control-hardware">Firmware and control hardware</h3>
+<ul>
+<li><code>softName</code> : firmware name. Example: <code>"OpenCPN"</code></li>
+<li><code>softVersion</code> : firmware version. Example: <code>"2.1.4"</code></li>
+<li><code>softFormat</code> : firmware format IDs. Example: <code>"1"</code></li>
+<li><code>ctrlBoard</code> : controller board name. Example: <code>"OpenLog"</code></li>
+<li><code>crtlBrdSerial</code> : controller board serial number. Example: <code>"CB-12345"</code></li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+<code>crtlBrdSerial</code> contains the spelling used by the current implementation and must be sent exactly as shown.</p>
+</blockquote>
+<h2 id="value-conventions">Value conventions</h2>
+<h3 id="identifier-list-filters">Identifier-list filters</h3>
+<p>The following kinds of filters generally expect one or more numeric identifiers as a comma-separated string:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"programs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12,45"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1,2"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"variables"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5,8,11"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="date-range-filters">Date-range filters</h3>
+<p>Date ranges are represented by separate <code>From</code> and <code>To</code> filters:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"deplDateFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-01-01"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"deplDateTo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-12-31"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>The same convention is used for observation, location, retrieval, warning, and notification dates.</p>
+<h3 id="geographic-bounds">Geographic bounds</h3>
+<p>Bounding boxes use separate latitude and longitude limits:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"deplLatFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-60"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"deplLatTo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"60"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"deplLonFrom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"120"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"deplLonTo"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-120"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>When the minimum longitude is greater than the maximum longitude, the search may be interpreted as crossing the antimeridian.</p>
+<h3 id="boolean-style-filters">Boolean-style filters</h3>
+<p>Boolean-style filters are normally enabled using <code>"on"</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"hasWigosId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"wmoActive"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"lastObsOnly"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Some legacy filters use <code>"1"</code> instead:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"allGdacs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="compatibility">Compatibility</h2>
+<p>This endpoint delegates filter processing to <code>PlatformFilterSubQueryBuilder</code>. New filters added to that builder may therefore become usable by the endpoint before they are added to this document.</p>
+<p>The list above should nevertheless be treated as the documented public contract. New filter keys should be explicitly added here when introduced so that clients do not need to inspect the Java implementation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
